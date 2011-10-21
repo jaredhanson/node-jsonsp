@@ -1,0 +1,16 @@
+{
+  "name": "jsonsp",
+  "version": "0.0.0",
+  "description": "JSON Stream Parser for Node.js.",
+  "author": "Jared Hanson <jaredhanson@gmail.com> (http://www.jaredhanson.net/)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jaredhanson/node-jsonsp.git"
+  },
+  "main": "./lib/jsonsp",
+  "dependencies": {
+    "yajl": "https://github.com/jaredhanson/node-yajl/tarball/v0.6.1-build-fix"
+  },
+  "engines": { "node": ">= 0.4.0" },
+  "keywords": ["json" ]
+}
