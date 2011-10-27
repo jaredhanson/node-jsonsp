@@ -34,22 +34,22 @@ Create a new JSON stream parser.  The parser will incrementally parse data from
 a stream, and emit an `'object'` event each time it parses a fully-formed JSON
 object.
 
-var parser = new jsonsp.Parser()
-parser.on('object', function(obj) {
-  // do something with obj
-});
+    var parser = new jsonsp.Parser()
+      parser.on('object', function(obj) {
+      // do something with obj
+    });
 
 #### Parse Data from Stream
 
 As chunks of data are read from a stream, they can be incrementally parsed by
 the JSON stream parser.
 
-var req = http.request(options, function(res) {
-  // feed each chunk of data incrementally to the JSON stream parser
-  res.on('data', function(chunk) {
-    parser.parse(chunk.toString('utf8'));
-  });
-});
+    var req = http.request(options, function(res) {
+      // feed each chunk of data incrementally to the JSON stream parser
+      res.on('data', function(chunk) {
+        parser.parse(chunk.toString('utf8'));
+      });
+    });
 
 #### Examples
 
