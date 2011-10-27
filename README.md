@@ -4,6 +4,8 @@
 
 ## Installation
 
+    $ npm install jsonsp
+
 Install from source code repository:
 
     $ git clone git@github.com:jaredhanson/node-jsonsp.git
@@ -23,6 +25,39 @@ I have forked and patched yajl to address this issue, and the dependency
 declared by jsonsp points to the tarball URL corresponding to the [v0.6.1-build-fix](https://github.com/jaredhanson/node-yajl/tree/v0.6.1-build-fix)
 tag on my fork.  Once the main yajl repository accepts the patch, jsonsp will
 switch to the npm Registry for its dependency.
+
+## Usage
+
+#### Initialize Parser
+
+Create a new JSON stream parser.  The parser will incrementally parse data from
+a stream, and emit an `'object'` event each time it parses a fully-formed JSON
+object.
+
+var parser = new jsonsp.Parser()
+parser.on('object', function(obj) {
+  // do something with obj
+});
+
+#### Parse Data from Stream
+
+As chunks of data are read from a stream, they can be incrementally parsed by
+the JSON stream parser.
+
+var req = http.request(options, function(res) {
+  // feed each chunk of data incrementally to the JSON stream parser
+  res.on('data', function(chunk) {
+    parser.parse(chunk.toString('utf8'));
+  });
+});
+
+#### Examples
+
+For a complete, working example, refer to the [Twitter Streaming API example](https://github.com/jaredhanson/node-jsonsp/tree/master/examples/twitter-stream).
+
+## Credits
+
+  - [Jared Hanson](http://github.com/jaredhanson)
 
 ## License
 
