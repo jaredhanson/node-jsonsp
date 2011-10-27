@@ -1,6 +1,6 @@
 {
   "name": "jsonsp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "JSON Stream Parser for Node.js.",
   "author": "Jared Hanson <jaredhanson@gmail.com> (http://www.jaredhanson.net/)",
   "repository": {
