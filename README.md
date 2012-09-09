@@ -1,4 +1,4 @@
-# JSONSP
+# jsonsp
 
 [JSON](http://www.json.org/) stream parser for [Node](http://nodejs.org).
 
@@ -9,6 +9,7 @@
 Install from source code repository:
 
     $ git clone git@github.com:jaredhanson/node-jsonsp.git
+    $ cd node-jsonsp
     $ npm install
 
 jsonsp depends on [YAJL](http://lloyd.github.com/yajl/) and the
@@ -18,13 +19,6 @@ must be installed on your system prior to installing jsonsp.
 Install YAJL via [Homebrew](http://mxcl.github.com/homebrew/) on Mac OS X:
 
     $ brew install yajl
-    
-Note that the latest version of yajl (0.6.1) in the npm Registry fails to
-install via npm, as reported in issue [#3](https://github.com/vibornoff/node-yajl/issues/3).
-I have forked and patched yajl to address this issue, and the dependency
-declared by jsonsp points to the tarball URL corresponding to the [v0.6.1-build-fix](https://github.com/jaredhanson/node-yajl/tree/v0.6.1-build-fix)
-tag on my fork.  Once the main yajl repository accepts the patch, jsonsp will
-switch to the npm Registry for its dependency.
 
 ## Usage
 
@@ -34,8 +28,8 @@ Create a new JSON stream parser.  The parser will incrementally parse data from
 a stream, and emit an `'object'` event each time it parses a fully-formed JSON
 object.
 
-    var parser = new jsonsp.Parser()
-      parser.on('object', function(obj) {
+    var parser = new jsonsp.Parser();
+    parser.on('object', function(obj) {
       // do something with obj
     });
 
@@ -51,9 +45,14 @@ the JSON stream parser.
       });
     });
 
-#### Examples
+## Examples
 
 For a complete, working example, refer to the [Twitter Streaming API example](https://github.com/jaredhanson/node-jsonsp/tree/master/examples/twitter-stream).
+
+## Tests
+
+    $ npm install
+    $ make test
 
 ## Credits
 
@@ -63,7 +62,7 @@ For a complete, working example, refer to the [Twitter Streaming API example](ht
 
 (The MIT License)
 
-Copyright (c) 2011 Jared Hanson
+Copyright (c) 2011-2012 Jared Hanson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
