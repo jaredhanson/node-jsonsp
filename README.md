@@ -1,4 +1,4 @@
-# jsonsp
+# JSONSP
 
 [JSON](http://www.json.org/) stream parser for [Node](http://nodejs.org).
 
@@ -12,9 +12,9 @@ Install from source code repository:
     $ cd node-jsonsp
     $ npm install
 
-jsonsp depends on [YAJL](http://lloyd.github.com/yajl/) and the
+JSONSP depends on [YAJL](http://lloyd.github.com/yajl/) and the
 [YAJL binding for Node.js](https://github.com/vibornoff/node-yajl).  libyajl
-must be installed on your system prior to installing jsonsp.
+must be installed on your system prior to installing JSONSP.
 
 Install YAJL via [Homebrew](http://mxcl.github.com/homebrew/) on Mac OS X:
 
