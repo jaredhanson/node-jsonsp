@@ -1,19 +1,29 @@
 {
   "name": "jsonsp",
   "version": "0.1.0",
-  "description": "JSON Stream Parser for Node.js.",
-  "author": "Jared Hanson <jaredhanson@gmail.com> (http://www.jaredhanson.net/)",
+  "description": "JSON stream parser for Node.js.",
+  "keywords": ["json" ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/jaredhanson/node-jsonsp.git"
+    "url": "git://github.com/jaredhanson/node-jsonsp.git"
   },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/node-jsonsp/issues"
+  },
+  "author": { "name": "Jared Hanson", "email": "jaredhanson@gmail.com", "url": "http://www.jaredhanson.net/" },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
   "main": "./lib/jsonsp",
   "dependencies": {
-    "yajl": ">= 0.8.0"
+    "yajl": "0.8.x"
   },
   "devDependencies": {
     "vows": "0.6.x"
   },
-  "engines": { "node": ">= 0.4.0" },
-  "keywords": ["json" ]
+  "scripts": {
+    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js"
+  },
+  "engines": { "node": ">= 0.4.0" }
 }

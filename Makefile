@@ -10,7 +10,7 @@ docs: docs/api.html
 docs/api.html: lib/jsonrpc-tcp/*.js
 	dox \
 		--title JSONSP \
-		--desc "JSON Stream Parser for Node.js" \
+		--desc "JSON stream parser for Node.js" \
 		$(shell find lib/jsonsp/* -type f) > $@
 
 docclean:
