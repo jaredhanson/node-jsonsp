@@ -17,6 +17,7 @@
   } ],
   "main": "./lib/jsonsp",
   "dependencies": {
+    "pkginfo": "0.2.x",
     "yajl": "0.8.x"
   },
   "devDependencies": {
