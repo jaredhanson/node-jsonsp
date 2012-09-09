@@ -63,7 +63,7 @@ vows.describe('Parser').addBatch({
     
     'should parse correctly': function (obj) {
       assert.isArray(obj.people);
-      assert.length(obj.people, 2);
+      assert.lengthOf(obj.people, 2);
       assert.equal(obj.people[0], "John Doe");
       assert.equal(obj.people[1], "Jane Doe");
     },
@@ -82,7 +82,7 @@ vows.describe('Parser').addBatch({
     
     'should parse correctly': function (obj) {
       assert.isArray(obj);
-      assert.length(obj, 2);
+      assert.lengthOf(obj, 2);
       assert.equal(obj[0], 'hello');
       assert.equal(obj[1], 'world');
     },
@@ -102,7 +102,7 @@ vows.describe('Parser').addBatch({
     },
     
     'should parse correctly': function (objs) {
-      assert.length(objs, 1);
+      assert.lengthOf(objs, 1);
       assert.equal(objs[0].id, '1');
       assert.equal(objs[0].method, 'echo');
     },
@@ -124,7 +124,7 @@ vows.describe('Parser').addBatch({
     },
     
     'should parse correctly': function (objs) {
-      assert.length(objs, 2);
+      assert.lengthOf(objs, 2);
       assert.equal(objs[0].id, '1');
       assert.equal(objs[0].method, 'echo');
       assert.equal(objs[1].id, '99');
@@ -144,7 +144,7 @@ vows.describe('Parser').addBatch({
     },
     
     'should listen for object event' : function(objs) {
-      assert.length(objs, 1);
+      assert.lengthOf(objs, 1);
     },
   },
   

@@ -11,6 +11,9 @@
   "dependencies": {
     "yajl": ">= 0.8.0"
   },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
   "engines": { "node": ">= 0.4.0" },
   "keywords": ["json" ]
 }
