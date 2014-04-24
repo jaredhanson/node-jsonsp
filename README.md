@@ -20,6 +20,9 @@ Install YAJL via [Homebrew](http://mxcl.github.com/homebrew/) on Mac OS X:
 
     $ brew install yajl
 
+
+    $ CPLUS_INCLUDE_PATH=/usr/local/include LIBRARY_PATH=/usr/local/lib npm install
+
 ## Usage
 
 #### Initialize Parser
